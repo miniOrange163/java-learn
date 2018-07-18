@@ -1,0 +1,5 @@
+{"id":1,"name":"郭靖","sequenceId":0,"createdTime":1524641272119,"eventClassName":"AccountCreateEvent","realTime":true}
+{"id":2,"name":"黄蓉","sequenceId":1,"createdTime":1524641272348,"eventClassName":"AccountCreateEvent","realTime":true}
+{"id":1,"money":1000,"sequenceId":3,"createdTime":1524641272350,"eventClassName":"AccountDepositEvent","realTime":true}
+{"id":2,"money":500,"sequenceId":4,"createdTime":1524641272360,"eventClassName":"AccountDepositEvent","realTime":true}
+{"money":500,"accountNoFrom":1,"accountNoTo":2,"sequenceId":5,"createdTime":1524641272362,"eventClassName":"AccountTransferEvent","realTime":true}
