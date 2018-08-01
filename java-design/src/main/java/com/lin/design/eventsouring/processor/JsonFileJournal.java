@@ -28,7 +28,7 @@ public class JsonFileJournal {
     private int index = 0;
 
     public JsonFileJournal() {
-        aFile = new File("account.json");
+        aFile = new File("resources/java-design/account.json");
 
         System.out.println(aFile.getAbsolutePath());
 
