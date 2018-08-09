@@ -18,10 +18,10 @@ public class SortHelper {
 
         int[] array = new int[length];
 
-        Random random = new Random(100);
+        Random random = new Random(length);
 
         for(int i = 0 ;i<length;i++) {
-            array[i] = random.nextInt();
+            array[i] = random.nextInt(100);
         }
 
         return array;
