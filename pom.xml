@@ -13,6 +13,7 @@
         <module>java-sort</module>
         <module>data-structures</module>
         <module>demo-mongodb</module>
+        <module>demo-redis</module>
     </modules>
     <properties>
         <compiler.version>3.0</compiler.version>
