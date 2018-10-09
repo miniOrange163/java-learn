@@ -11,6 +11,7 @@
     <modules>
         <module>java-design</module>
         <module>java-sort</module>
+        <module>data-structures</module>
     </modules>
     <properties>
         <compiler.version>3.0</compiler.version>
