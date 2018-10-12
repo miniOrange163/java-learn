@@ -7,7 +7,7 @@ package com.lin.sort;
  *
  * @name: 希尔排序
  *
- * @Description:
+ * @Description: 直接插入排序算法的一种更高效的改进版本
  */
 public class ShellSort {
 }

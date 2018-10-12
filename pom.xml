@@ -11,6 +11,8 @@
     <modules>
         <module>java-design</module>
         <module>java-sort</module>
+        <module>data-structures</module>
+        <module>demo-mongodb</module>
         <module>demo-redis</module>
     </modules>
     <properties>

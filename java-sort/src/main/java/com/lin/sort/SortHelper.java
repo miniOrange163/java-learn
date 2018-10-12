@@ -18,7 +18,7 @@ public class SortHelper {
 
         int[] array = new int[length];
 
-        Random random = new Random(length);
+        Random random = new Random();
 
         for(int i = 0 ;i<length;i++) {
             array[i] = random.nextInt(100);
@@ -35,7 +35,7 @@ public class SortHelper {
     }
 
     public static void printArray(int[] array) {
-
+        System.out.println();
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + "\t");
         }
@@ -43,12 +43,12 @@ public class SortHelper {
 
     public static void doSort(int[] array, Consumer<int[]> consumer) {
 
-        System.out.println("before:");
+        System.out.print("before:");
         SortHelper.printArray(array);
 
         consumer.accept(array);
 
-        System.out.println("\nafter:");
+        System.out.print("\nafter:");
         SortHelper.printArray(array);
     }
 }
