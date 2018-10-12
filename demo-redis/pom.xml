@@ -11,6 +11,44 @@
 
     <groupId>java-learn</groupId>
     <artifactId>demo-redis</artifactId>
+    <properties>
+        <!-- spring版本号 -->
+        <spring.version>4.3.5.RELEASE</spring.version>
+        <log4j.version>1.2.17</log4j.version>
+
+    </properties>
+    <dependencies>
+
+        <!-- spring核心包 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+      <!--  <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring.version}</version>
+        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>1.7.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+        <!-- log start -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <!-- log end -->
+
+    </dependencies>
 
 
 </project>
