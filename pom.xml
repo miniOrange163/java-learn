@@ -14,11 +14,19 @@
         <module>data-structures</module>
         <module>demo-mongodb</module>
         <module>demo-redis</module>
+        <module>spring-cloud-eureka-server</module>
+        <module>spring-cloud-service-operation</module>
+        <module>spring-cloud-service-add</module>
+        <module>spring-cloud-service-substract</module>
+        <module>spring-cloud-service-multiply</module>
+        <module>spring-cloud-service-divide</module>
+
     </modules>
     <properties>
         <compiler.version>3.0</compiler.version>
         <jacoco.version>0.7.2.201409121644</jacoco.version>
         <slf4j.version>1.7.21</slf4j.version>
+        <log4j.version>1.2.17</log4j.version>
         <logback.version>1.1.7</logback.version>
         <mockito.version>1.10.19</mockito.version>
         <junit.version>4.12</junit.version>
@@ -50,6 +58,23 @@
             <version>${slf4j.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
@@ -63,6 +88,11 @@
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.8.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.56</version>
         </dependency>
     </dependencies>
 
