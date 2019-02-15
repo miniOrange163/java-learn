@@ -82,7 +82,9 @@ public class OperationController {
     @RequestMapping(value = "operPort")
     public PortInfoEntity operPort(HttpServletRequest request) {
 
-        return ribbonService.port();
+        PortInfoEntity portInfo = ribbonService.port();
+        portInfo.setMyPort(Integer.parseInt(port));
+        return portInfo;
 
     }
 

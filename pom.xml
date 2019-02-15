@@ -20,6 +20,7 @@
         <module>spring-cloud-service-substract</module>
         <module>spring-cloud-service-multiply</module>
         <module>spring-cloud-service-divide</module>
+        <module>spring-cloud-service-zuul</module>
 
     </modules>
     <properties>

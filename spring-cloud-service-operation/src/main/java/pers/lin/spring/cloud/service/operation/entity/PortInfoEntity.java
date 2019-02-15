@@ -10,6 +10,8 @@ package pers.lin.spring.cloud.service.operation.entity;
  */
 public class PortInfoEntity {
 
+    private int myPort;
+
     private int add;
 
     private int subtract;
@@ -17,6 +19,14 @@ public class PortInfoEntity {
     private int multiply;
 
     private int divide;
+
+    public int getMyPort() {
+        return myPort;
+    }
+
+    public void setMyPort(int myPort) {
+        this.myPort = myPort;
+    }
 
     public int getAdd() {
         return add;

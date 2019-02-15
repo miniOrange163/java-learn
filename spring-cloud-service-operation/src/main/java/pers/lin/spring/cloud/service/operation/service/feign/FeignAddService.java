@@ -13,7 +13,7 @@ import pers.lin.spring.cloud.service.operation.entity.ResultEntity;
  * @name:
  * @Description:
  */
-@FeignClient(value = "service-operation-add")
+@FeignClient(value = "service-operation-add",fallback = HystrixFeignAdd.class)
 public interface FeignAddService {
 
     @RequestMapping(value = "/oper/add")
