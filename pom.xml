@@ -21,6 +21,7 @@
         <module>spring-cloud-service-multiply</module>
         <module>spring-cloud-service-divide</module>
         <module>spring-cloud-service-zuul</module>
+        <module>spring-cloud-config-server</module>
 
     </modules>
     <properties>
