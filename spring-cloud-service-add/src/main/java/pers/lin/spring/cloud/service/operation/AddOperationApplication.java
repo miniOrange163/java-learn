@@ -16,7 +16,7 @@ public class AddOperationApplication {
 
     @Autowired
     void setEnviroment(Environment env) {
-        System.out.println("config.value from env: "
+        System.out.println("config.value: "
                 + env.getProperty("config.value"));
     }
 
