@@ -23,6 +23,8 @@
         <module>spring-cloud-service-zuul</module>
         <module>spring-cloud-config-server</module>
         <module>spring-cloud-service-db</module>
+        <module>spring-cloud-zipkin-server</module>
+
 
     </modules>
     <properties>

@@ -27,7 +27,19 @@ public class JsonFileJournal {
     private final List<String> events = new ArrayList<>();
     private int index = 0;
 
+    public static void main(String[] args) {
+        File a = new File("resources/");
+
+        System.out.println(a.getAbsolutePath());
+        System.out.println(a.exists());
+
+        System.out.println(a.isDirectory());
+
+        System.out.println(a.listFiles());
+
+    }
     public JsonFileJournal() {
+
         aFile = new File("resources/java-design/account.json");
 
         System.out.println(aFile.getAbsolutePath());

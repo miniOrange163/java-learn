@@ -1,9 +1,11 @@
 package pers.lin.spring.cloud.service.operation;
 
+import brave.sampler.Sampler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 
 @SpringBootApplication
@@ -20,6 +22,11 @@ public class AddOperationApplication {
                 + env.getProperty("config.value"));
     }
 
+
+    @Bean
+    public Sampler defaultSampler(){
+        return Sampler.ALWAYS_SAMPLE;
+    }
 
 }
 

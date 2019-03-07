@@ -305,7 +305,7 @@ public class OperationController {
             String b = tmpList.poll();
             String result = compute(a,b,o,operationService);
             if (StringUtils.isNotBlank(result)) {
-                tmpList.addLast(result);
+                tmpList.addFirst(result);
             }
             else{
                 return null;
