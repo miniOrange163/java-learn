@@ -22,6 +22,7 @@ public class AdminServerApplication {
         SpringApplication.run(AdminServerApplication.class, args);
     }
 
+    // 关闭登录校验
 //    @Configuration
 //    public static class SecurityPermitAllConfig extends WebSecurityConfigurerAdapter {
 //        @Override
@@ -29,38 +30,48 @@ public class AdminServerApplication {
 //            http.authorizeRequests().anyRequest().permitAll()
 //                    .and().csrf().disable();
 //        }
+//
 //    }
-    @Configuration
-    public static class SecuritySecureConfig extends WebSecurityConfigurerAdapter {
-        private final String adminContextPath;
+    // 关闭登录校验
 
-        public SecuritySecureConfig(AdminServerProperties adminServerProperties) {
-            this.adminContextPath = adminServerProperties.getContextPath();
-        }
 
-        @Override
-        protected void configure(HttpSecurity http) throws Exception {
-            // @formatter:off
-            SavedRequestAwareAuthenticationSuccessHandler successHandler = new SavedRequestAwareAuthenticationSuccessHandler();
-            successHandler.setTargetUrlParameter("redirectTo");
-            successHandler.setDefaultTargetUrl(adminContextPath + "/");
+    // 打开登录校验
 
-            http.authorizeRequests()
-                    .antMatchers(adminContextPath + "/assets/**").permitAll()
-                    .antMatchers(adminContextPath + "/login").permitAll()
-                    .anyRequest().authenticated()
-                    .and()
-                    .formLogin().loginPage(adminContextPath + "/login").successHandler(successHandler).and()
-                    .logout().logoutUrl(adminContextPath + "/logout").and()
-                    .httpBasic().and()
-                    .csrf()
-                    .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
-                    .ignoringAntMatchers(
-                            adminContextPath + "/instances",
-                            adminContextPath + "/actuator/**"
-                    );
-            // @formatter:on
-        }
-    }
+//
+//    @Configuration
+//    public static class SecuritySecureConfig extends WebSecurityConfigurerAdapter {
+//        private final String adminContextPath;
+//
+//        public SecuritySecureConfig(AdminServerProperties adminServerProperties) {
+//            this.adminContextPath = adminServerProperties.getContextPath();
+//        }
+//
+//        @Override
+//        protected void configure(HttpSecurity http) throws Exception {
+//            // @formatter:off
+//            SavedRequestAwareAuthenticationSuccessHandler successHandler = new SavedRequestAwareAuthenticationSuccessHandler();
+//            successHandler.setTargetUrlParameter("redirectTo");
+//            successHandler.setDefaultTargetUrl(adminContextPath + "/");
+//
+//            http.authorizeRequests()
+//                    .antMatchers(adminContextPath + "/assets/**").permitAll()
+//                    .antMatchers(adminContextPath + "/login").permitAll()
+//                    .anyRequest().authenticated()
+//                    .and()
+//                    .formLogin().loginPage(adminContextPath + "/login").successHandler(successHandler).and()
+//                    .logout().logoutUrl(adminContextPath + "/logout").and()
+//                    .httpBasic().and()
+//                    .csrf()
+//                    .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
+//                    .ignoringAntMatchers(
+//                            adminContextPath + "/instances",
+//                            adminContextPath + "/actuator/**"
+//                    );
+//            // @formatter:on
+//        }
+//    }
+
+    // 打开登录校验
+
 }
 
