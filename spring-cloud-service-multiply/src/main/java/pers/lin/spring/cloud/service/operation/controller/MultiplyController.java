@@ -1,7 +1,9 @@
 package pers.lin.spring.cloud.service.operation.controller;
 
 import org.apache.commons.collections4.map.HashedMap;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -34,10 +36,24 @@ public class MultiplyController {
 
     @Value("${spring.application.name}")
     private String name;
+    public static Environment myEnvironment ;
+
+    @Autowired
+    void setEnviroment(Environment env) {
+        myEnvironment = env;
+    }
+
+    @RequestMapping(value = "getConfigValue")
+    public String getConfigValue(HttpServletRequest request) {
+        String config = request.getParameter("config");
+        String property = myEnvironment.getProperty(config);
+        return property;
+    }
+
+
     @RequestMapping(value = "name")
     public String name(HttpServletRequest request) {
         return name + "-" + port;
-
     }
 
     @RequestMapping(value = "port")
