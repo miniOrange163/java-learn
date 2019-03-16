@@ -24,6 +24,7 @@
         <module>spring-cloud-config-server</module>
         <module>spring-cloud-service-db</module>
         <module>spring-cloud-admin-server</module>
+        <module>demo-zookeeper</module>
 
 
     </modules>

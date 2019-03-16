@@ -4,6 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import pers.lin.spring.cloud.service.operation.config.FeignConfig;
 import pers.lin.spring.cloud.service.operation.entity.OperEntity;
 import pers.lin.spring.cloud.service.operation.entity.ResultEntity;
 
@@ -13,7 +14,7 @@ import pers.lin.spring.cloud.service.operation.entity.ResultEntity;
  * @name:
  * @Description:
  */
-@FeignClient(value = "service-operation-add",fallback = HystrixFeignAdd.class)
+@FeignClient(value = "service-operation-add",fallback = HystrixFeignAdd.class,configuration=FeignConfig.class)
 public interface FeignAddService {
 
     @RequestMapping(value = "/oper/add")
